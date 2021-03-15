@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
 import BlogPosts from './posts.json'
+import UserIds from './users.json';
 import Blog from './Blog.js';
 
 function Blogs() {
@@ -18,13 +19,14 @@ function Blogs() {
         
         <div>
             <h1> Hello </h1>
-            {BlogPosts.map((BlogPost , index)=>{
-                
-                return <div className="ui card">
+            {UserIds.map((UserId)=>{
+                return BlogPosts.map((BlogPost)=>{
+                     if(UserId.id === BlogPost.userId){
+                        return(<div className="ui card">
                 <div id="divValue" class="content" src>
                     <i className="right floated like icon"></i>
                     <i className="right floated star icon"></i>
-                    <h2 className="ui header">{BlogPost.userId}</h2>
+                    <h2 className="ui header">{UserId.name}</h2>
                     <h3 className="ui header">Title : {BlogPost.title}</h3>
                     <div className="description">
                     <p>{BlogPost.body} <a href="/blog">  see more..</a></p>
@@ -41,9 +43,14 @@ function Blogs() {
                     </span>
                 </div>
                 </div>
+                 )   
+                }else{
+                    
+                }
+            }) 
             }) 
             }
-                
+
         </div>
     )
 

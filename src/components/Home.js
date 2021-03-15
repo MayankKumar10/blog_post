@@ -7,6 +7,7 @@ function Home() {
 
     return (
         <div className="ui grid">
+
             {UserIds.map((UserId)=>{
                 return BlogPosts.map((BlogPost)=>{
                      if(UserId.id === BlogPost.userId){
@@ -30,6 +31,7 @@ function Home() {
                 
             }) 
             }
+            
         </div>
 
 
