@@ -18,7 +18,7 @@ function Blogs() {
     return (
         
         <div>
-            <h1> Hello </h1>
+            
             {UserIds.map((UserId)=>{
                 return BlogPosts.map((BlogPost)=>{
                      if(UserId.id === BlogPost.userId){
