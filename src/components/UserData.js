@@ -10,9 +10,8 @@ function UserData() {
                 <div className="content">{UserId.name}</div>
                 <div className="content">{UserId.email}</div>
                 <div className="extra content">
-                    <div className="ui two buttons">
-                    <div className="ui basic green button">Approve</div>
-                    <div className="ui basic red button">Reject</div>
+                    <div className="ui one buttons">
+                    <div className="ui basic green button">Follow</div>
                     </div>
                 </div>
                 </div>

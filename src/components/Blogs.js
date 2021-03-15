@@ -1,38 +1,49 @@
-import React from 'react'
+import React,{useState} from 'react'
 import BlogPosts from './posts.json'
+import Blog from './Blog.js';
 
 function Blogs() {
-    var BlogPost;
+    const[value, setValue] = useState(0);
+
+    // const click = (e)=>{
+    //     document.querySelector('#divValue').addEventListener('click', (e)=>{
+    //         console.log(e);
+    //         let url = './blog';
+    //         let other = window.open(url, '_blank');
+    //     });
+    //     console.log(value)
+    // }
+
     return (
         
         <div>
             <h1> Hello </h1>
             {BlogPosts.map((BlogPost , index)=>{
                 
-                return <div class="ui card">
-                <div class="content">
-                    <i class="right floated like icon"></i>
-                    <i class="right floated star icon"></i>
-                    <h2 class="ui header">{BlogPost.userId}</h2>
-                    <h3 class="ui header">Title : {BlogPost.title}</h3>
-                    <div class="description">
-                    <p>{BlogPost.body}</p>
+                return <div className="ui card">
+                <div id="divValue" class="content" src>
+                    <i className="right floated like icon"></i>
+                    <i className="right floated star icon"></i>
+                    <h2 className="ui header">{BlogPost.userId}</h2>
+                    <h3 className="ui header">Title : {BlogPost.title}</h3>
+                    <div className="description">
+                    <p>{BlogPost.body} <a href="/blog">  see more..</a></p>
                     </div>
                 </div>
-                <div class="extra content">
-                    <span class="left floated like">
-                    <i class="like icon"></i>
+                <div className="extra content">
+                    <span className="left floated like">
+                    <i className="like icon"></i>
                     Like
                     </span>
-                    <span class="right floated star">
-                    <i class="star icon"></i>
+                    <span className="right floated star">
+                    <i className="star icon"></i>
                     Favorite
                     </span>
                 </div>
                 </div>
             }) 
             }
-                <h1>--------{BlogPosts[5].userId[5]} user id 5</h1>
+                
         </div>
     )
 

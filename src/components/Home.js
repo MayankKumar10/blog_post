@@ -13,10 +13,11 @@ function Home() {
                         return( 
                         <div className="ui card five wide column">
                         <div className="content">{UserId.name}</div>
+                        <h4 className="content">{BlogPost.title}</h4>
                         <div className="extra content">
                         <div className="ui two buttons">
-                            <div className="ui basic green button">Approve</div>
-                            <div className="ui basic red button">Reject</div>
+                            <div className="ui basic green button">Follow</div>
+                            <div className="ui basic red button">Remove Suggestion</div>
                         </div>
                         </div>
                         </div>
